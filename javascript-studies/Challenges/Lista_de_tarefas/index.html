@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; 
+  color: #333;
+}
+
+
+h1 {
+  color: #4b4b9f; 
+  margin-bottom: 10px;
+}
+
+/* input */
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #6a5acd;
+  box-shadow: 0 0 5px rgba(106, 90, 205, 0.3);
+}
+
+    </style>
+</head>
+<body>
+    <h1> Lista de tarefas</h1>
+    <label for="list"> Lista:<input type="text" id="list" placeholder="Adicione suas tarefas aqui!"></label>
+    <button onclick="adicionar()">Adicionar</button>
+  <ul id="res">
+
+  </ul>
+</body>
+<script>
+let lista = [ 
+" Lavar a louça",
+" Limpar a casa",
+" Jogar o Lixo Fora"
+]
+let res = document.getElementById("res")
+ res.innerHTML += ""
+ for(let li of lista ){
+ res.innerHTML += `<li>${li}</li> `}
+function adicionar(){
+    let input = document.getElementById("list")
+    let valor = input.value.trim()
+    if ( valor != "" ){
+        lista.push(valor)
+        res.innerHTML += `<li>${valor}</li>`
+        input.value = ""
+    } else {
+        alert("Escreva algo antes. ")
+    }
+
+    
+}
+</script>
+</html>

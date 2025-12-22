@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Responsivo</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/mediaquery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+   <main>
+   <section id="login" >
+    <div id="img"></div>
+    <div id="form">
+    <h1>Login</h1>
+    <p> Seja bem-vindo(a) novamente! faça login para entrar em sua conta.</p> <br>
+    <form action="nada.php" method="post" autocomplete="on">
+    <label for="email">
+    <span class="material-symbols-outlined">person</span>
+    <input type="email" class="formulario" name="email" id="email" required placeholder="Seu e-mail" autocomplete="email"></label> <br>
+    <label for="sen">
+        <span class="material-symbols-outlined">lock</span>
+        <input type="password" class="formulario"  id="sen" placeholder="Sua senha" autocomplete="current-password">
+    </label > <br>
+    <input type="submit" id="entrar" class="envio" value="Entrar"> <br>
+    <button class="envio"> Esqueci a senha</button>
+    </form>
+    </div>
+   </section>
+   </main>
+</body>
+</html>

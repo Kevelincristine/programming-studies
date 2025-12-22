@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX25</title>
+</head>
+<body>
+    <h1> Contando de 0 até um número positivo qualquer</h1>
+    <p> Escolha o limite para a contagem a partir do 0 (digite apenás números posotivos)</p>
+   <label for="n1"> Valor Final:
+<input type="number" id="n1" placeholder=" Apenas números positivos">
+   </label>
+   <button onclick="contar()"> Contar</button>
+   <p> preencha os dados acima e aperte o botão</p>
+<div id="res"> </div>
+
+</body>
+<script> 
+    function contar(){
+        let res = document.getElementById("res")
+      
+        let num = document.getElementById("n1")
+        let NF = Number(num.value)
+          res.innerHTML += ` <br>Contando de 0 até ${NF} <br>`
+        for( let c = 0; c<=NF;c++){
+        res.innerHTML += ` ${c} &#x1F449`
+        }
+        res.innerHTML += "&#x1F3C1"
+    }
+</script>
+</html>

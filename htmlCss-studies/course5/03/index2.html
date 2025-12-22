@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .conteiner{
+            border: 1px solid blue;
+            display: grid;
+
+            grid-template:1fr 1fr 1fr/ 1fr 4fr  1fr;
+            
+            gap: 10px;
+           place-items: normal normal;
+           place-content:normal normal;
+           grid-auto-columns: 80px;
+           grid-auto-flow: column;
+           
+          
+        }
+        .item{
+            border: 1px solid red;
+            text-align: center;
+            padding: 5px;
+           
+           
+        }
+    </style>
+</head>
+<body>
+    <h1> Forma basica de um grid Layout II</h1>
+ <div class="conteiner">
+<div class="item">A</div>
+<div class="item">B</div>
+<div class="item">C</div>
+<div class="item">D</div>
+<div class="item">E</div>
+<div class="item">F</div>
+<div class="item">G</div>
+<div class="item">H</div>
+<div class="item">I</div>
+<div class="item">J</div>
+ </div>
+</body>
+</html>

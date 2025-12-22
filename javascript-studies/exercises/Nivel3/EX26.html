@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex26</title>
+</head>
+<body>
+    <h1>Contagem "inteligente" </h1>
+    <p> Use qualquer valor nas caixas, simule contagens crescentes e regressivas. Use também valores negativos</p>
+    <label for="n1">
+        Valor inicial: <input type="number" placeholder="Inicio da contagem" id="n1" >
+    </label> <br>
+    <label for="n2">
+        Valor final: <input type="number" placeholder="Fim da contagem" id="n2" >
+    </label> <br>
+    <button onclick="contar()"> Contar</button>
+    <p> Preencha os dados acima e aperte o botão.</p>
+    <div id="res"></div>
+        
+</body>
+ <script>
+    function contar(){
+        let res = document.getElementById("res")
+         let n1 = document.getElementById("n1")
+         let n2 = document.getElementById("n2")
+         let IN = Number(n1.value)
+         let FN = Number(n2.value)
+          res.innerHTML = `` 
+         res.innerHTML += `<br> Contando de ${IN} até ${FN} <br>`
+        if ( IN > FN){
+            cont = IN
+            while (cont >= FN){
+                res.innerHTML += `${cont} &#x1F449;`
+                cont--
+            }
+        
+        }
+        else if ( IN < FN){
+            cont = IN
+            while (cont <= FN){
+                res.innerHTML += `${cont} &#x1F449;`
+                cont++
+            }
+        } else {
+            res.innerHTML += ` Os números são iguais`
+        }
+
+           res.innerHTML += "&#x1F3C1"    
+           
+    }
+ </script>
+</html>

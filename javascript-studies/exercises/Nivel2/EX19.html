@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX19</title>
+</head>
+<body>
+    <h1> Multiplas ações</h1>
+    <button onclick="MulOp()">Clique para iniciar</button>
+    <br> 
+    <h2> Calculando...</h2>
+    <div id="res"></div>
+</body>
+<script>
+  function MulOp(){
+    let res = document.getElementById("res")
+    let num1 = prompt("Escolha número:")
+    let num2 = prompt("Escolha outro número:")
+    let Ops = prompt(`Valores informados ${num1} e ${num2} 
+     O que fazer? 
+     [1]Somar 
+     [2]Subtrair
+     [3]Multiplicar
+     [4]Dividir`)
+     if ( num1.length === 0 || num2.length === 0 || Ops.length === 0){
+        res.innerHTML = `Você não preencheu corretamente as informações...`
+     } else {
+         let n1 = Number(num1)
+          let n2 = Number(num2)
+         let ops = Number(Ops)
+      switch(ops)  {
+       case 1: 
+        res.innerHTML = `${n1} + ${n2} = ${ n1 + n2}`
+         break
+       case 2:
+        res.innerHTML = `${n1} - ${n2} = ${n1 - n2}`
+         break
+        case 3: 
+         res.innerHTML = ` ${n1} * ${n2} = ${ n1 * n2 }`
+         break
+        case 4:
+        res.innerHTML = `${n1} / ${n2} = ${ n1 / n2}`
+        break
+        default:
+            res.innerHTML = `Opção invalida!!` 
+            break
+
+      }
+     }
+  }
+</script>
+</html>

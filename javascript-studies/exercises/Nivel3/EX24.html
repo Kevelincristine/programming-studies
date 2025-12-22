@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex24</title>
+</head>
+<body>
+    <h1> Contagem recressiva de 10 a 1</h1>
+    <button onclick="contar()"> Contar de 10 a 1</button>
+    <p> Aperte o botão para contar
+    </p>
+    <div id="res"></div>
+</body>
+<script>
+    function contar(){
+        let res = document.getElementById("res")
+        res.innerHTML +=`<br> Contagem Recressiva de 10 a 1<br>`
+        for( let c =10; c>=1; c--){
+            res.innerHTML += `${c} &#x1F449`
+        }
+        res.innerHTML += "&#x1F3C1"
+    }
+</script>
+</html>

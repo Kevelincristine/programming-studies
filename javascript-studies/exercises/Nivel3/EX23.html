@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX23</title>
+</head>
+<body>
+    <h1> Contando de 1 a 10(mostrando só os pares)</h1>
+    <button onclick="contar()"> Contar de 1 a 10</button>
+    <p>Aperte o botão acima para contar</p>
+    <div id="res"></div>
+</body>
+<script>
+    function contar(){
+        let res = document.getElementById("res")
+        res.innerHTML += "<br> Números pares de 1 até 10 <br>"
+        let x = 1
+        while ( x <=10){
+
+            if( x % 2 == 0){
+                res.innerHTML += `${x} &#x1F449`
+            } else {
+                res.innerHTML += ""
+            }
+         x++
+        }
+        res.innerHTML  += `&#x1F3C1`
+    }
+</script>
+</html>

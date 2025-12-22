@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Números</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Vamos Contar!</h1>
+    <p>
+    Este site foi feito com <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>. 
+    Ele conta números automaticamente de um valor inicial até um final, 
+    usando o passo informado pelo usuário. 
+    O resultado aparece na tela com emojis que deixam a contagem mais divertida!
+  </p>
+    <main>
+        
+        <section>
+         <label for="num1"> Inicio: <input type="number" id="num1"></label> <br>
+          <label for="num2"> &nbsp; fim: &nbsp;&nbsp;<input type="number" id="num2"></label> <br>
+           <label for="num3">pulos: <input type="number" id="num3"></label> <br> <br>
+           <input id="botao"  type="button" value="enviar" onclick="contar()"> 
+           <div id="res"> resultado:</div>
+
+        </section>
+    </main>
+    
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundo</title>
+    <style>
+   div.da{
+     height: 300px;
+     width: 500px;
+     border: 1px solid black;
+     background-color: rgba(133, 132, 132, 0.26);
+
+  }
+  #d01{ background-image: url(imagens/pattern003.png);
+    background-repeat: repeat;
+  }
+  #d02{
+    background-image: url(imagens/pattern001.png);
+    background-repeat: repeat-x;
+  }
+  #d03{
+    background-image: url(imagens/pattern002.png);
+    background-repeat: repeat-y;
+  }
+  #d04{
+    background-image: url(imagens/pattern004.png);
+background-repeat: no-repeat;    
+  }
+    </style>
+</head>
+<body>
+    <h1> Repetição de backgorund-image</h1>
+    <h2> backgorund-repeat: backgorund-repeat</h2>
+    <p>apenas repete</p>
+    <div class="da" id="d01"> </div>
+    <h2> backgorund-image: repeat; x</h2>
+    <p>repete apenas o eixo horizontal</p>
+    <div class="da" id="d02"></div>
+    <h2>backgorund-repeat: repeat-y</h2>
+    <p> Repete apenas o eixo vertical</p>
+    <div class="da" id="d03"></div>
+    <h2>backgorund-repeat: no-repeat;</h2> 
+    <p> Não repete o eixo . A imagem só é carregada uma única vez</p>
+    <div class="da" id="d04"></div>
+
+</body>
+</html>

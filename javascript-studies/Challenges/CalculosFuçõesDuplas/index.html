@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Duplas</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input, select {
+    padding: 5px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#res {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border-left: 4px solid #4CAF50;
+    border-radius: 4px;
+}
+
+    </style>
+</head>
+<body>
+    <h1> Calculando valores</h1>
+    <p> digita dois valores e escolhe uma operação</p>
+    <label for="num1"> 1° Número: <input type="number" id="num1"></label> <br> <br>
+    <label for="num2"> 2° Número: <input type="number" id="num2"></label> <br>
+    <select  id="opções"> 
+     <option value="somar">somar</option>
+    <option value="subtrair">subtrair</option>
+    <option value="multiplicar">multiplicar</option>
+    <option value="dividir">dividir</option>
+    </select>
+    <button onclick="MostreRes()">Calcular</button>
+    <div id="res"></div>
+</body>
+<script>
+   
+    function calcular( n1, n2, op){
+       if (op === "somar"){
+        return n1 + n2
+       }
+       else if ( op === "subtrair")
+       {
+         return n1 - n2
+       }
+       else if (op === "multiplicar"){
+        return n1 * n2
+       }
+       else if ( op === "dividir") {
+        return n1 / n2
+       }
+       else {
+        return "valor invalido"
+       }
+    }
+     function MostreRes(){
+     let res = document.getElementById("res")
+    let n1 = Number(document.getElementById("num1").value)
+    let n2 = Number(document.getElementById("num2").value)
+    let op = document.getElementById("opções").value
+    let resposta = calcular( n1,n2,op)
+    res.innerHTML = `<p> o resultado é ${resposta}</p>`
+     }
+</script>
+</html>

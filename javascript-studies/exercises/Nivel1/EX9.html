@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX9</title>
+</head>
+<body>
+    <h1>Contando Cliques </h1>
+    <hr>
+    <button onclick="clicar()">
+        Clique em mim
+    </button>
+    <button onclick="zerar()"> Zerar o contador</button>
+ <div id="res">
+ </div>
+</body>
+<script>
+    let contador = 0
+    let res = document.getElementById("res")
+      
+    function clicar(){
+      contador ++
+      res.innerHTML = ` O contador esta com <mark>${contador}</mark>  cliques `
+    }
+    function zerar(){
+       res.innerHTML = ""
+       contador = 0
+    }
+</script>
+</html>

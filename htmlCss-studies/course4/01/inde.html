@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario
+
+    </title>
+</head>
+<body>
+    <form action="">
+        <h1> Texte de formulario</h1>
+        <fieldset>
+            <legend> dados pessoais
+
+            </legend>
+            <p> <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" required maxlength="30 "
+                 placeholder="Nome completo" autocomplete="name">
+            <p><label for="media"> Media: <input type="number" step="0.5" name="media" id="media" autocomplete="name" placeholder="sua media"></label></p>
+            </p>
+            <p> <input type="submit" value="Enviar">
+                 <input type="reset" value="limpar"></p>
+                 <p> Imail:
+                    <label for="imail" >
+                        <input type="email" name="imail " id="imail" autocomplete="on"></label>
+                 </p>
+                 <p> Telefone:<label for="tel" a> <input type="tel" name="tel" id="tel" autocomplete="tel" placeholder="xxx-xxxx" pattern="\\(d{2}\^[0-9]{4})-[0-9]{4}$"></label>
+                 </p>
+        </fieldset>
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX18</title>
+</head>
+<body>
+    <H1> Tente adivinhar meu número</H1>
+    <button onclick="adivinhar()"> Tente adivinhar</button>
+    <p> Já penseu em um valor entre 1 e 100...</p>
+    <div id="res"></div>
+</body>
+  <script>
+    let num = Math.floor(Math.random() * 100) + 1    
+  function adivinhar(){
+    let res = document.getElementById("res")
+    let resposta = Number(prompt("Qual é seu palpite?"))
+     
+   
+        if ( resposta < num){
+            res.innerHTML = `Voce falou ${resposta}. Meu número é <strong>MAIOR</strong>`
+        }else if ( resposta > num){
+         
+            res.innerHTML = ` Você falou ${resposta}. Meu número é <strong>MENOR</strong>`
+        } else  {
+       
+            res.innerHTML = 
+            `Isso mesmo! O valor que eu pensei é <strong>${num} <strong>`
+           
+        }
+    
+  }
+
+  </script>
+</html>

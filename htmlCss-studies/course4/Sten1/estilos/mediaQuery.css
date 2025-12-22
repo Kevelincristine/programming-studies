@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* Para tablets */
+@media (max-width: 768px) {
+  #login {
+    max-width: 90%;
+  }
+}
+
+/* Para celulares */
+@media (max-width: 480px) {
+  #img {
+    height: 120px;
+  }
+
+  #formulario {
+    padding: 15px;
+  }
+
+  #formulario p {
+    font-size: 0.85rem;
+  }
+
+  .envio {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}

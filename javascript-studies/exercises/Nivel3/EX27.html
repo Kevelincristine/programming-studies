@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX27</title>
+</head>
+<body>
+    <h1>Super Tabuada</h1>
+    <p>Escreva um número na caixa a seguir e te mostrareu a tabuada dele.</p>
+    <label for="num">Número: <input type="number" id="num" placeholder="Número"> </label>
+    <button onclick="tab()"> Tabuada</button>
+    <p>Preencha os dados acima e aperte o botão</p>
+    <div id="res"></div>
+</body>
+<script> function tab(){
+    let res = document.getElementById("res")
+    let n = Number(document.getElementById("num").value)
+    res.innerHTML = ""
+    res.innerHTML += `<br>Tabuada de ${n}<br>`
+    for(let c = 1;c <=10; c++ ){
+        res.innerHTML += ` ${n} x ${c} = ${ n*c} <br>`
+    }
+
+}</script>
+</html>

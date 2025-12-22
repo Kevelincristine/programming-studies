@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX4</title>
+</head>
+<body>
+    <h1> Trabalhando com Dados</h1>
+    <button onclick="clicar()">Clique para começar</button> <br>
+    <div id="res">Aqui vai aparecer o resultado...</div>
+    <br>
+    <p>Agora veja o console do site!</p>
+</body>
+<script>
+    let res = document.getElementById("res")
+    function clicar(){
+        let nome = window.prompt("Qual seu nome?")
+        res.innerHTML += ""
+        res.innerHTML = `Olá, <strong>${nome}! </strong> É um grande prazer te conhecer!`
+        console.log(`Olá também aqui ${nome}!`)
+    }
+</script>
+</html>

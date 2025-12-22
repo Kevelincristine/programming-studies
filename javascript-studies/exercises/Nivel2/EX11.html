@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        EX11
+    </title>
+</head>
+<body>
+    <h1> Analisando nota do aluno</h1>
+    <button onclick="calcular()"> Calcular média</button>
+    <div id="res"> O resultado vai aparecer aqui...</div>
+</body>
+<script>
+    let res = document.getElementById("res")
+    
+    function calcular(){
+     res.innerHTML = ""
+     let nome = prompt("Qual o nome do aluno?")
+     let num1 = Number( prompt(`Qual a primeira nota de ${nome}?`))
+    let num2 = Number(prompt(`Qual a segunda nota de ${nome}?`))
+    let media =( num1 + num2)/ 2
+    res.innerHTML = ` Sua médiafoi <mark>${media}</mark> <br>`
+    if ( media >= 7){
+        res.innerHTML += ` Parabéns você passou!`
+    } else {
+        res.innerHTML += `Não foi dessa vez, estude um pouco mais...`
+    }
+
+    }
+</script>
+</html>

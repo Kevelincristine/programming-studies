@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+
+
+:root{
+    --verde: #49a06d;
+    --Lizas: #9f2d89 ;
+}
+  
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body, html {
+    background-color: var(--Lizas);
+    height: 100vh;
+    width: 100vw;
+}
+main {
+     position: relative;
+
+    height: 100vh;
+    width: 100vw;
+
+
+}
+section#login{
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+     background-color: white;
+    transition-timing-function: ease;
+}
+section#login div#img{
+    background-color: var(--Lizas);
+    background-image: url(../img/Imagem-capa\ -\ Copia.jpg);
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+    display: block;
+    background-position: center;
+    
+}
+section#login div#form{
+    display: block;
+    padding: 10px;
+
+}
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+p{
+    font-family: 0.8em;
+}
+form > input[type=submit]{
+   display: block;
+   font-size: 1em;
+   width: 100%;
+  height: 40px;
+  background-color: var(--verde);
+  color: white;
+  border-radius: 5px;
+}
+form > input[type=submit]:hover {
+    background-color: #2f6646;
+}
+ #link{
+        display: block;
+        text-align: center;
+        font-size: 1em;
+        width: 100%;
+        height: 40px;
+        background-color: var(--verde);
+        border: 1px solid #326b4a;
+        color:#1b3f2a;
+    }
+    #link {
+    font-size: 0.8px;
+}

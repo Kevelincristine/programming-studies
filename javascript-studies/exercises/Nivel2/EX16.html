@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX16</title>
+</head>
+<body>
+    <h1> Calculando Idade</h1>
+    <button onclick="iniciar()"> Iniciar</button>
+    <div id="res"> O resultado estará aqui..</div>
+</body>
+<script>
+    function iniciar(){
+        let res = document.getElementById("res")
+        res.innerHTML = ""
+        
+        let agora = new Date()
+        let ano = Number(prompt("Em que ano você nasceu?"))
+        let nasc = agora.getFullYear()
+        let resposta = nasc - ano
+        res.innerHTML += ` <br> Quem nasceu em ${ano} vai completar <strong>${resposta}</strong> anos em ${nasc}`
+    }
+</script>
+</html>

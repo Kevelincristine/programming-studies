@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox teste</title>
+    <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+
+    }
+   
+     main{
+        background-color: rgb(240, 69, 97);
+        height:100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    section{
+        background-color: white;
+        height: 400px;
+        width: 300px;
+        border-radius: 10px;
+        display: flex;
+        flex-flow: column wrap;
+        align-content:space-around;
+    }
+    .divi{
+        background-color: aqua;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+
+        
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="conteiner">
+            <div class="divi">
+
+            </div>
+            <div class="divi">
+
+            </div>
+            <div class="divi">
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>

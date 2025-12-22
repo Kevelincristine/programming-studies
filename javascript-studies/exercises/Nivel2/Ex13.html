@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX13</title>
+</head>
+<body>
+    <h1> Maior valor</h1>
+    <button onclick="comparar()"> Clique aqui para começar</button> 
+    <div id="res"> O resultado vai aparecer aqui...</div>
+</body>
+<script>
+    let res = document.getElementById("res") 
+    function comparar(){
+     res.innerHTML = ""   
+    let n1 = Number(prompt("Escolha um número:"))
+    let n2 = Number(prompt("Escolha outro número:"))
+    if( n1 > n2){
+        res.innerHTML = `Entre o número ${n1} e o número ${n2}. o maior é ${n1}`
+    } else {
+         res.innerHTML = `Entre o número ${n1} e o número ${n2}. O maior é ${n2}`
+    }
+     }
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX7</title>
+</head>
+<body>
+    <H1> Média do Aluno</H1>
+    <button onclick="media()"> Clique Aqui para fazer a média </button>
+    <div id="res"></div>
+</body>
+<script>
+  function media(){ 
+    let res = document.getElementById("res")
+    let nome = prompt("Qual o nome do aluno?")
+    let nota1 = prompt(`Qual a primeira nota do(a) ${nome}?`)
+    let nota2 = prompt(`Qual a segunda nota do(a) ${nome}?`)
+    let Vn1 = Number(nota1)
+    let Vn2 = Number(nota2)
+    let media = (Vn1 + Vn2) / 2
+    res.innerHTML = `A média de ${nome} é ${media}`
+
+  }
+</script>
+</html>

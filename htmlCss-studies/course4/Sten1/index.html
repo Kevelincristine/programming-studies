@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Senha</title>
+  <link rel="stylesheet" href="estilos/style.css">
+  <link rel="stylesheet" href="estilos/mediaQuery.css">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+  <main>
+    <section id="login">
+      <div id="img"></div>
+      <div id="formulario">
+        <h1>Login</h1>
+        <p>Seja bem-vindo(a) novamente! Faça login para entrar em sua conta.</p>
+        <form action="nada.php" method="post">
+          <label>
+            <span class="material-symbols-outlined">person</span>
+            <input type="text" name="text" id="text" required placeholder="Seu nome">
+          </label>
+          <label>
+            <span class="material-symbols-outlined">lock</span>
+            <input type="password" name="password" id="password" required placeholder="Sua senha">
+          </label>
+          <input id="entrar" class="envio" type="submit" value="Entrar">
+          <button type="button" class="envio">Esqueci a senha</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: darkgray;
+    font-family:Arial, Helvetica, sans-serif;
+}
+h1,h2 {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+}
+p {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+}
+#dv1{
+    background-color: paleturquoise;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    width: 400px;
+    height: 150px;
+    margin: auto;
+}
+#dv2{
+    background-color: paleturquoise;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 400px;
+    height: 150px;
+    
+}

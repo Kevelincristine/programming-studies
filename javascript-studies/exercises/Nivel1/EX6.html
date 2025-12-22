@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex6</title>
+</head>
+<body>
+    <h1> Somando Números</h1>
+    <div id="res"></div>
+</body>
+<script>
+    let res = document.getElementById("res")
+    let n1 = window.prompt("Escolha um número:")
+    let n2 = window.prompt("Escolha outro número:")
+    let vl1 = Number(n1)
+    let vl2 = Number(n2)
+    let resultado = vl1 + vl2
+    res.innerHTML = ` A soma de ${vl1} mais ${vl2} é ${resultado}!`
+
+</script>
+</html>

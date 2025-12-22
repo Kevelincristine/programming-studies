@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX20</title>
+</head>
+<body>
+    <h1> Descubra a estação do ano</h1>
+
+    <button onclick="mes()"> Informe o mês aqui</button>
+    <div id="res"></div>
+</body>
+<script>
+    let res = document.getElementById("res")
+  function mes(){
+   let mes = prompt("Digite o mês em extenso (ex: Junho)").toLowerCase()
+ 
+   switch(mes){
+    case "janeiro":
+    case "fevereiro":
+    case "março":
+        res.innerHTML =` Em ${mes} é Verão`
+        break
+    case "abril":
+    case "maio":
+    case "junho":
+       res.innerHTML = `Em ${mes} é Outono`
+       break
+    case "julho":
+    case "agosto": 
+    case "setembro": 
+     res.innerHTML = `Em ${mes} é Inverno`
+       break
+    case"outubro":
+    case"novembro": 
+    case "dezembro":
+     res.innerHTML = `Em ${mes} é Primavera`
+     break
+     default:
+        res.innerText = `Mês invalido...`
+        break
+
+   }
+   }
+  
+ 
+
+</script>
+</html>

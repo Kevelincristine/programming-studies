@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Array em sites</title>
+</head>
+<body>
+    <h1>Catálogo de Produtos</h1>
+    <ul id="lista-produtos"> </ul>
+ 
+</body>
+<script>
+    const produtos = [
+        { id: 101, nome: "Smartphone X", preco: 1200 },
+        { id: 102, nome: "Laptop Gamer", preco: 5500 },
+        { id: 103, nome: "Fone de Ouvido", preco: 350 }
+    ]; 
+    
+   
+    const containerLista = document.getElementById("lista-produtos");
+    
+    for( let i = 0; i < produtos.length; i++){
+      
+        const produtoAtual = produtos[i]; 
+    
+        const novoItemLista = document.createElement("li");
+        
+       
+        novoItemLista.textContent = `ID: ${produtoAtual.id} | ${produtoAtual.nome} | Preço: R$ ${produtoAtual.preco}`;
+        
+        
+        containerLista.appendChild(novoItemLista); 
+    }
+  
+</script>
+</html>

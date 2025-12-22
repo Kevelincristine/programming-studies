@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX5</title>
+</head>
+<body>
+    <h1> Trabalhando com números</h1>
+    <button onclick="Numero()"> Clique aqui para calcular.</button>
+    <div id="res"></div>
+</body>
+<script>
+    window.alert("Seja bem-vindo ao meu site!")
+    function Numero(){
+        let num = window.prompt("Digite um número:")
+        let res = document.getElementById("res")
+        let ValorNumero = Number(num)
+        let dobro = ValorNumero * 2
+        let metade = ValorNumero / 2
+        res.innerHTML = ` O dobro de ${ValorNumero} é ${dobro} e a metade é ${metade}`
+
+    }
+</script>
+</html>

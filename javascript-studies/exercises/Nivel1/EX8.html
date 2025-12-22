@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX8</title>
+</head>
+<body>
+    <H1> Mais Calculos em JavaScript</H1>
+    <button  onclick="calcular()"> Iniciar o calculo</button>
+    <div id="res"> O resultado vai aparecer aqui...</div>
+</body>
+<script>
+    function calcular(){
+  let num = Number(prompt("Digite um número: "))
+let res = document.getElementById("res")
+res.innerHTML = `<p> O número a ser analiasado aqui será o <strong> ${num}</strong> </p> <hr>`
+res.innerHTML += `<p> O seu valor absoluto é ${
+    Math.abs(num)}  </p>`
+res.innerHTML += `<p> A parte inteira é ${Math.round(num)}</p>`
+res.innerHTML += `<p> O valor inteiro mais próximo é ${Math.round(num)}</p>`
+res.innerHTML +=` <p> A raiz quadrada é ${Math.sqrt(num)}</p>`
+res.innerHTML += ` <p> A raiz cubica é ${Math.cbrt(num)} </p>`
+res.innerHTML += `<p>O valor de ${num}<sup>2</sup> é ${Math.pow(num, 2)}</p>`
+res.innerHTML += `<p>O valor de ${num}<sup>3</sup> é ${Math.pow(num, 3)}</p>`
+    }
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX15</title>
+</head>
+<body>
+    <h1> Analizando data e hora no sitema</h1>
+    <button onclick="analise()"> Iniciar Análise</button>
+    <div
+    id="saida"></div>
+</body>
+<script>
+    let saida = document.getElementById("saida")
+    function analise(){
+        saida.innerHTML = ""
+        let agora = new Date
+        saida.innerHTML += `Dia: ${agora.getDate()}<br>`
+        saida.innerHTML += `Mês: ${agora.getMonth()} <br>`
+        saida.innerHTML += `Ano: ${agora.getFullYear()} <br>`
+        saida.innerHTML += `Dia da semana: ${agora.getDay()} <br>`
+        saida.innerHTML += `Hora: ${agora.getHours()} <br>`
+        saida.innerHTML += `Minutos: ${agora.getMinutes()} <br>`
+        saida.innerHTML += `Segundos: ${agora.getSeconds()} <br>`
+
+       
+
+
+    }
+</script>
+</html>

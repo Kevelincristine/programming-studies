@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+*{
+   margin: 0px;
+   padding: 0px;
+}
+body {
+    height: 100vh;
+    width: 100vh;
+    background-color:darkcyan;
+    box-sizing: border-box;
+}
+main  {
+    height: 90vh;
+    width: 100vw;
+
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    color: darkcyan;
+    font-weight: bold;
+}
+input{
+       height: 1.2em;
+       
+}
+section{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+h1, p {
+    text-align: center;
+    height: 5vh;
+    width: 100vw;
+    color: white;
+
+}
+#botao{
+    background-color: aquamarine;
+    border: 1px solid darkcyan;
+    padding: 5px;
+    padding-bottom: 20px;
+    margin: auto;
+    margin-left: 100px;
+    border-radius: 10px;
+}
+#botao:hover{
+    background-color: rgb(19, 165, 165);
+    color: white;
+}
+
