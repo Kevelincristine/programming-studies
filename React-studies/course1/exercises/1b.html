@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1b</title>
+</head>
+<body>
+    <div id="container"></div>
+
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script> 
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+const productCost = 10 + 8 + 8
+console.log(productCost)
+const div = (
+<div>
+    <p> Cotton Socks</p>
+    <p> Price $10</p>
+    <p>  two T-Shirts</p>
+    <p>  Price $8 <strong>each</strong></p>
+    <button > Add to cart</button>
+    <p> Product cost:$ {productCost}</p>
+    </div>
+    
+)
+
+
+  ReactDOM.createRoot(document.getElementById("container")).render(div)
+
+    </script>
+
+</body>
+</html>

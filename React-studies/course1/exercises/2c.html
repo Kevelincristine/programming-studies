@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2c</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+ 
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+    
+
+    function App(){
+      return<p> Hello, welcome to my website</p>
+    }
+    function TwoButtons(){
+      return (
+      <div>
+        <button> Login</button>
+        
+        <button> Sing in</button>
+        </div>
+      )
+    }
+    function TwoInputs(){
+        return (
+            <>
+                <input type="text" placeholder="Email"/>
+                <br/>
+                <input type="text" placeholder="`Password"/>
+            </>
+        )
+    }
+    function Web(){
+       return(
+    <>
+        <App/>
+        <TwoInputs/>
+        <TwoButtons/>
+
+    </>
+      )
+    }
+    
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<Web />);
+    </script>
+  </body>
+  
+</html>
