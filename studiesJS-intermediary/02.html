@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02</title>
+</head>
+<body>
+    <h2> Eventos usamdo addEventListener </h2>
+
+    <h2> Meu contador</h2>
+    <p> Clique nos botões para adicionar ou diminuir o valor no contador.</p>
+    <div id="valor">Contador:</div>
+    <button id="menos">Menos</button>
+    <button id="mais">Mais</button>
+    <h2> listinha</h2>
+    <p> escreva algo </p>
+    <input type="text" placeholder="escreva..." id="input1">
+    <div id="tarefas"></div>
+    <h2> formulario</h2>
+    <form action="" id="formulario" >
+        <input type="text" placeholder="listinha" id="input2">
+        <button type="submit" >enter</button>
+
+    </form>
+    <div id="resform"> </div>
+</body>
+<script>
+    let valordiv = document.querySelector("#valor");
+    let valor = 0
+    let menos = document.querySelector("#menos");
+    let mais = document.querySelector("#mais");
+    let lista = document.querySelector("#input1");
+    let tarefas  = document.querySelector("#tarefas");
+    let formulario = document.querySelector("#formulario")
+    let ninput = document.querySelector("#input2")
+    let resform = document.querySelector("#resform")
+ 
+    function adicionar() {
+         valor++
+        valordiv.innerHTML = ` Contador: ${valor}`
+    }
+   menos.addEventListener("click", () =>{
+       if ( valor > 0){
+        valor--
+      valordiv.innerHTML = ` Contador: ${valor}` }
+      else {
+         valordiv.innerHTML = ` Contador: ${valor}`
+      }
+      // função anonima
+      
+   })
+   mais.addEventListener("click",adicionar)
+    //função nomeada
+   
+   lista.addEventListener("input",()=>{
+     let item = lista.value
+     tarefas.innerHTML = `${item}`
+     
+   })
+   formulario.addEventListener("submit",(event)=>{
+      event.preventDefault()
+     let valor = ninput.value
+     resform.innerHTML += `${valor} <br> `
+
+   })
+   
+
+
+</script>
+</html>

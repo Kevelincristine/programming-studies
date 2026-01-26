@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX20 Projeto</title>
+    <style>
+        *{ padding: 0px;
+           margin: 0px;
+           box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right,rgb(197, 200, 252) ,rgb(45, 151, 227));
+            color: rgb(0, 38, 150);
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-flow: column wrap;
+            font-size: larger;
+            justify-content: center;
+            gap: 50px;
+            align-items: center;
+        }
+        button{
+            background-color: rgb(0, 38, 150);
+            color: white;
+            padding: 5px;
+            border: 0px;
+            border-radius: 2px;
+
+        }
+        input{
+            background-color: #bed7f7;
+            border: 0px;
+        }
+         button:hover{
+            background-color: rgb(21, 21, 61);
+         }
+         #res{
+            background-color: rgb(26, 58, 145);
+            
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+         }
+    </style>
+</head>
+<body>
+    <h1>APP de busca de cidade e clima 🌤️</h1>
+    <form id="formulario">
+        <label for="cidade">
+            <strong>Escreva a cidade aqui</strong>:
+            <input type="text" id="cidade" >
+        </label>
+        <button type="submit">Buscar</button>
+    </form>
+    <div id="res">
+
+    </div>
+    <script>
+        const form = document.querySelector("#formulario");
+        const input = document.querySelector("#cidade");
+        const res = document.querySelector("#res");
+        const apiKey = "cc0dd39f8620414db37135932262301";
+        form.addEventListener("submit",(event)=>{
+             event.preventDefault();
+            if( input.value.trim() === ""){
+                alert("Escreva algo antes!");
+                return
+            } else{
+                const cidade = input.value.trim();
+               const url = ` https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(cidade)}&aqi=no;
+            }`
+             fetch(url)
+             .then( response => {
+                if(!response.ok){
+                    throw new Error("cidade não encontrada!");
+                   
+                }
+                 return response.json();
+             })
+             .then(dados =>{
+                res.innerHTML =`
+                Cidade:${dados.location.name}<br>
+                Pais: ${dados.location.country}<br>
+                Temperatura: ${dados.current.temp_c}°C <br>
+                Clima: ${dados.current.condition.text}
+                
+                `
+             })
+             .cach(Error =>{
+                res.innerHTML =  `<p> Erro: ${error.message} </p>`
+             });
+            };
+
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex11</title>
+</head>
+<body>
+    <h1> Objetos treino</h1>
+    <form id="form">
+        <input type="text" id="nome" placeholder="nome"> <br>
+        <input type="number"  id="idade" placeholder="idade"> <br>
+        <input type="email"  id="email" placeholder="email"> <br> <br>
+         <button id="btn" type="submit">Enviar</button>
+    </form>
+    <div id="res"> 
+
+    </div>
+</body>
+<script>
+   const n = document.querySelector("#nome");
+   const i = document.querySelector("#idade");
+   const e = document.querySelector("#email");
+   const btn = document.querySelector("#form");
+   const res = document.querySelector("#res");
+   const user = {
+    nome:"",
+    idade:0,
+    email:""
+   };
+   btn.addEventListener("submit",(event)=>{
+    event.preventDefault();
+
+    user.nome = n.value;
+    user.idade = i.value;
+    user.email = e.value;
+    res.innerHTML = `
+      <p><strong>Nome:</strong> ${user.nome}</p>
+      <p><strong>Idade:</strong> ${user.idade}</p>
+      <p><strong>Email:</strong> ${user.email}</p>
+    `;
+   })
+   
+   
+   
+</script>
+</html>

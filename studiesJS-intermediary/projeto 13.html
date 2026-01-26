@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini projeto 13</title>
+</head>
+<body>
+    <div id="res"></div>
+</body>
+<script>
+  const alunos = [
+   {nome:"Bianca", notas:[3,6,8]},
+   {nome:"Luiza", notas:[7,8,8]},
+   {nome:"Bernardo", notas:[6,5,4]},
+   {nome:"João", notas:[8,7,7]},
+   {nome:"Pablo", notas:[9,7,9]}
+  ];
+  function MediaAlunos(notas){
+   const soma = notas.reduce((total,nota)=>{
+      return total + nota;
+   },0);
+   return  soma / notas.length
+  };
+  const NovaMedia = alunos.map( a =>({
+   nome:a.nome,
+   media: MediaAlunos(a.notas)
+  }));
+  const Aprovados = NovaMedia.filter( a => a.media >= 7);
+   const res = document.querySelector("#res");
+    res.innerHTML = `<h2> Alunos Aprovados </h2>`;
+   Aprovados.forEach(a => {
+      res.innerHTML += `
+      <p> 
+         ${a.nome} - média: ${a.media.toFixed(1)}
+         </p>
+      `;
+   });
+</script>
+</html>

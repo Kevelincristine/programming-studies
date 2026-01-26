@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex12</title>
+</head>
+
+<body>
+    <h1> Lista de produtos</h1>
+    <div id="lc">
+         
+    </div>
+</body>
+<script>
+const local = document.querySelector("#lc")
+ const produtos = [
+    { nome:"caderno",preco:15},
+    {nome:"caneta", preco:3},
+    {nome:"mochila",preco:120}
+];
+produtos.forEach( produto =>
+{
+  local.innerHTML += `<strong> Produto:</strong> ${produto.nome} <strong> Preço R$:</strong> ${produto.preco} <br>`
+}
+)
+
+</script>
+</html>

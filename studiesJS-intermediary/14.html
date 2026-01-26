@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revisao 14</title>
+</head>
+<body>
+    <!--
+========================================
+REVISÃO JAVASCRIPT — DIAS 8 AO 13 ✅
+========================================
+
+----------------------------------------
+DIA 8 — ARROW FUNCTIONS
+----------------------------------------
+
+Função normal:
+function soma(a, b) {
+  return a + b;
+}
+
+Arrow function:
+const soma = (a, b) => a + b;
+
+Regra importante:
+- Se tiver UMA linha, pode tirar {} e return
+- Arrow function deixa o código mais curto
+
+
+----------------------------------------
+DIA 9 — ARRAYS (map e filter)
+----------------------------------------
+
+map → TRANSFORMA os valores
+- Sempre retorna um array do mesmo tamanho
+
+Exemplo:
+const numeros = [1, 2, 3];
+const dobro = numeros.map(n => n * 2);
+
+Resultado:
+[2, 4, 6]
+
+
+filter → FILTRA valores
+- Retorna apenas os que passam na condição
+
+Exemplo:
+const pares = numeros.filter(n => n % 2 === 0);
+
+Resultado:
+[2]
+
+
+----------------------------------------
+DIA 10 — reduce
+----------------------------------------
+
+reduce → JUNTA tudo em um único valor
+
+Exemplo (soma):
+const total = [10, 20, 30].reduce((soma, valor) => soma + valor, 0);
+
+Explicação:
+- Começa em 0
+- Soma cada valor do array
+
+Resultado:
+60
+
+
+----------------------------------------
+DIA 11 — OBJETOS
+----------------------------------------
+
+Objeto guarda dados relacionados
+
+Exemplo:
+const usuario = {
+  nome: "Ana",
+  idade: 18
+};
+
+Acessar:
+usuario.nome
+
+Modificar:
+usuario.idade = 19
+
+
+----------------------------------------
+DIA 12 — ARRAYS + OBJETOS
+----------------------------------------
+
+Exemplo:
+const produtos = [
+  { nome: "Caneta", preco: 2 },
+  { nome: "Caderno", preco: 15 }
+];
+
+map com objetos:
+produtos.map(p => p.nome);
+
+Resultado:
+["Caneta", "Caderno"]
+
+filter com objetos:
+produtos.filter(p => p.preco > 10);
+
+Resultado:
+[{ nome: "Caderno", preco: 15 }]
+
+
+----------------------------------------
+DIA 13 — MINI-PROJETO
+LISTA DE ALUNOS + MÉDIA
+----------------------------------------
+
+Estrutura do aluno:
+{
+  nome: "isabel",
+  notas: [9, 4, 7]
+}
+
+Função para calcular média:
+- Usa reduce
+- Soma as notas
+- Divide pela quantidade
+
+map:
+- Cria nova lista com nome e média
+
+filter:
+- Filtra alunos com média >= 7 (aprovados)
+
+
+----------------------------------------
+RESUMÃO PARA DECORAR
+----------------------------------------
+
+map    → transforma
+filter → filtra
+reduce → junta tudo
+objeto → dados relacionados
+
+----------------------------------------
+
+-->
+
+</body>
+</html>

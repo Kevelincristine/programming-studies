@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10</title>
+</head>
+<body>
+    <!-- EStudando reduce -->
+     
+</body>
+<script>
+    /* // ex 01
+const valor = [ 2,6,67];
+const soma = valor.reduce((total,nuns)=>
+    total + nuns , 0
+);
+alert(soma) 
+    // EX 02 
+const carrinhos = [
+    { nome:"livro", preco:30, quantidade:2},
+    { nome:"caneta",preco:5,quantidade:4}
+];
+const total = carrinhos.reduce((soma,quant)=>
+    soma + quant.quantidade , 0
+); 
+alert(total)
+*/
+    // DESAFIO
+        const carrinho = [
+            { nome:" bolsa", preco: 45},
+            {nome: "chaveiro", preco:15},
+            {nome:"tenis", preco:100},
+            {nome:"vestido",preco:150},
+            {nome:"sapatilha", preco:50}
+        ];
+        const totalpreco = carrinho
+        .filter( item => item.preco >= 50)
+        .reduce((soma,item)=>
+            soma + item.preco , 0
+        );
+        alert(totalpreco);
+</script>
+</html>

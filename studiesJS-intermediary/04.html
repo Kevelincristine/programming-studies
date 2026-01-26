@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04</title>
+</head>
+<body>
+    <!-- Criar Elementos em JS -->
+     <h1> Lista dinâmica</h1>
+     <form action="#">
+        <label for="inp" > tarefa:
+            <input type="text" id="inp" placeholder="Escreva aqui..."> 
+        </label> <br><br>
+     </form>
+        <button id="btn">Enviar</button>
+     <ul id="lista">
+
+     </ul>
+</body>
+<script>
+    const input = document.querySelector("#inp");
+    const list = document.querySelector("#lista");
+    const btn = document.querySelector("#btn");
+      
+    btn.addEventListener("click",()=>{
+        const resp = input.value;
+        const li = document.createElement("li");
+          li.textContent= `${resp}`;
+        list.appendChild(li);
+        input.value = "";
+      
+      
+
+    });
+    
+
+</script>
+</html>

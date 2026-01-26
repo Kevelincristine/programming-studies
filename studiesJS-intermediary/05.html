@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex05</title>
+</head>
+<body>
+<!-- <form action="" id="form">
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="email"id="email" placeholder="Email">
+    <button type="submit">Enviar</button>
+</form>
+<div id="mensagem"></div> -->
+<h1> Formulário com validação simples</h1>
+<form  id="myform">
+    <input type="text"id="nome" placeholder="Nome"> <br><br>
+    <input type="email"id="email" placeholder="Email"> <br> <br>
+    <input type="password" id="senha" placeholder="sua senha" required minlength="6">
+    <button type="submit">Enviar</button>
+</form>
+<div id="mensagem"></div>
+
+</body>
+<script>
+//  const form = document.getElementById("form");
+//  const nome = document.getElementById("nome")
+//  const email = document.getElementById("email")
+//  const mensagem = document.getElementById("mensagem")
+
+//  form.addEventListener("submit", function(event){
+//     event.preventDefault()
+//     if (nome.value === ""|| email.value === "") {
+//         mensagem.textContent = " Preencha todos os campos"
+//         mensagem.style.color = "red"
+//     } else {
+//         mensagem.textContent = "forulário enviado com sucesso!"
+//         mensagem.style.color = "green"
+//     }
+//  })
+const form = document.getElementById("myform")
+const nome = document.getElementById("nome")
+const email = document.getElementById("email")
+const senha = document.getElementById("senha")
+const mensagem = document.getElementById("mensagem")
+
+form.addEventListener("submit",function(event){
+    event.preventDefault()
+     if (nome.value === "") {
+    mensagem.textContent = "Preencha o nome"
+    mensagem.style.color = "red"
+    return
+  }
+
+  else if (!email.value.includes("@")) {
+    mensagem.textContent = "Email inválido"
+    mensagem.style.color = "red"
+    return
+  }
+
+  else if (senha.value.length < 6) {
+    mensagem.textContent = "A senha deve ter no mínimo 6 caracteres"
+    mensagem.style.color = "red"
+    return
+  }
+
+  mensagem.textContent = "Formulário preenchido com sucesso!"
+  mensagem.style.color = "green"
+})
+
+
+
+ </script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex19</title>
+</head>
+<body>
+    <p id="cidade"></p>
+    <p id="temp"></p>
+    <p id="descricao"></p>
+
+</body>
+<script>
+    const tempo = document.querySelector("#temp");
+async function  temp(){
+}
+try {
+ const res =  await fetch('https://api.open-meteo.com/v1/forecast?latitude=-23.55&longitude=-46.63&current_weather=true');
+ const dados = await res.json();
+  tempo.textContent = dados.current_weather.temperature;
+}
+catch(erro){
+     console.error("erro na busca:", erro);
+    }
+
+
+
+</script>
+</html>

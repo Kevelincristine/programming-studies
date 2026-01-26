@@ -30,7 +30,7 @@ body.escuro{
 header{
   background-color: var(--destaque);
   color: var(--texto);
-  padding: 10px;
+  padding: 5px;
   display: flex;
   justify-content: flex-end;
   align-content: center;
@@ -56,11 +56,16 @@ nav#menu a:hover{
   background-color: var(--destaque-inverso);
   color: var(--destaque);
 }
-main{
+main {
   display: grid;
-  grid-template-columns: auto 90vw auto;
+  grid-template-columns: auto minmax(320px, 900px) auto;
   gap: 20px;
   margin-top: 20px;
+}
+
+/* TODOS começam centralizados */
+main > section {
+  grid-column: 2;
 }
 
 section#ficha {

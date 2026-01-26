@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex06</title>
+    <style>
+        body{
+            background-color: paleturquoise
+        ;
+        color: rgb(41, 60, 77);
+        font-family: Arial, Helvetica, sans-serif;
+        }
+        Button{
+          background-color: aquamarine;
+          color: rgb(33, 56, 99);
+          border: 2px solid rgb(35, 35, 66);
+          border-radius: 3px;
+          font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <h1> Mini projeto To-do list basica </h1>
+    <p> Adicione o que você quer fazer.</p>
+     <label for="tarefas"> Tarefas:
+        <input type="text" id="tarefas" placeholder="ex:estudar à tarde">
+     </label> 
+     <button type="button" id="btn"> enviar</button> <button id="remv">remover</button>
+      <h2> Lista</h2>
+     <ul id="ul">
+       
+     </ul>
+     
+</body>
+<script>
+    
+    const ul = document.querySelector("#ul");
+    const btn = document.querySelector("#btn");
+    const tarefa = document.querySelector("#tarefas") ;
+    const remove = document.querySelector("#remv");
+    btn.addEventListener("click", function (){
+       if ( tarefa.value.trim()  === "" ){
+        alert(" Escreva algo antes ");
+       } else {
+        const tarefas = tarefa.value;
+        const li = document.createElement("li");
+        li.textContent = `${tarefas}`;
+        ul.appendChild(li);
+        tarefa.value=""
+       }
+    })
+    remove.addEventListener("click",()=>{
+        
+    })
+
+</script>
+</html>

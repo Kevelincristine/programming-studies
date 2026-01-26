@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01</title>
+    <style>
+        /* h2 {
+           color: blue;
+        } */
+    </style>
+</head>
+<body>
+   <!-- querySelector
+
+           getElementById
+           Exercício: mudar texto e cor ao clicar num botão
+     
+           <h1 id="titulo"> Olá</h1>
+           <h2 id="texto" class="destaque"> Tudo bem?</h2>
+           <h2 id="texto2" class="destaque"> Tudo bem?</h2> -->
+           <button class="botao" onclick="mudar()"> Clique aqui</button>
+
+</body>
+   <script>
+    let botao = document.querySelector("button");
+    function mudar() {
+        botao.textContent = " olá"
+        botao.style.color = " blue"
+        botao.style.backgroundColor = "red"
+    } 
+
+    /*
+   let tit = document.getElementById("titulo")
+   tit.textContent = " Novo olá" // muda o texto 
+
+
+   let texto = document.querySelector("#texto") // pelo id
+   let texto2 = document.querySelector(".destaque") // pela classe
+   let texto3 = document.querySelector("#texto") 
+   let texto4 = document.querySelector("#texto2") 
+   // pela tag
+
+ texto3.innerText = "texto alterado " // apenas estilo visivel
+  texto4.textContent = " texto alterado " 
+
+  texto3.style.color = "red" // muda a cor
+  texto4.style.backgroundColor = "yellow" // muda o fundo  */
+
+   </script>
+</html>
